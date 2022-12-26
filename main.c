@@ -18,7 +18,7 @@ int main()
     while(1==1)
     {
 
-    system("clear");
+    system("cls");
     disp();
     scanf("%s" , &cmd);
     
@@ -174,11 +174,16 @@ int disp()
     printf("\n\n"); 
     printf("\n_________________________\n");
     for(int x = 0 ; x<4 ; x++)
-    {   
+    {  
+	 
         for(int y = 0; y<4; y++)
         {
             //see number of spaces in it
-        if((tab[x][y]/10) == 0)
+        if(tab[x][y] == 0)
+        {
+        	printf("|     " , tab[x][y]);
+		}
+        else if((tab[x][y]/10) == 0)
         {
             printf("|  %d  " , tab[x][y]);
         }
@@ -192,7 +197,8 @@ int disp()
         }
         }
         printf("|\n_________________________\n");
-    }
+	}
+    
 }
 int sweep(int direction)
 {  // 
