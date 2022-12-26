@@ -23,27 +23,27 @@ int main()
     scanf("%s" , &cmd);
     
 
-    if(!(strcmp(cmd , "right")))
+    if(!(strcmp(cmd , "d")))
     {
         loopRight();
         sweep(1);
     }
-    else if(!(strcmp(cmd , "left"))) 
+    else if(!(strcmp(cmd , "q"))) 
     {
        loopLeft();
        sweep(2);
     }
-    else if(!(strcmp(cmd , "up"))) 
+    else if(!(strcmp(cmd , "z"))) 
     {
         loopUp();
         sweep(3);
     }
-    else if(!(strcmp(cmd , "down"))) 
+    else if(!(strcmp(cmd , "s"))) 
     {
         loopDown();
         sweep(4);
     }
-    else if(!(strcmp(cmd , "out"))) return 0; 
+    else if(!(strcmp(cmd , "exit"))) return 0; 
     
     //wait
 
@@ -169,8 +169,10 @@ int loopDown()
 	
 }
 int disp()
-{   printf("\n\n"); 
-    printf("\n-------------------------\n");
+{
+    printf("D : swipe right Q swipe left Z swipe up S swipe down");
+    printf("\n\n"); 
+    printf("\n_________________________\n");
     for(int x = 0 ; x<4 ; x++)
     {   
         for(int y = 0; y<4; y++)
@@ -189,7 +191,7 @@ int disp()
             printf("|%d " , tab[x][y]);
         }
         }
-        printf("|\n-------------------------\n");
+        printf("|\n_________________________\n");
     }
 }
 int sweep(int direction)
