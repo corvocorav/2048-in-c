@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-
+// see https://medium.com/swlh/i-made-a-game-in-c-run-in-a-web-browser-and-so-can-you-2911b9fe2368
 
 int disp(); int loopRight(); int loopLeft(); int loopUp(); int loopDown(); int sweep(int direction); int clear(); //int spawn(int x , int y,int spot);
 int tab[4][4] = {   {2,0,2,0},
